@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
+import {Link} from 'react-router-dom';
 import {
   Collapse,
   Navbar,
@@ -11,6 +12,7 @@ import {
   NavbarText
 } from 'reactstrap';
 import styles from '../../assets/mystyle.module.css';
+import logo from '../../assets/img/Logo.png'
 
 const NavbarSite = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,22 +21,22 @@ const NavbarSite = (props) => {
 
   return (
     <div>
-      <Navbar color="rgba(255,255,255,0.7)" light expand="md">
-        <NavbarBrand href="/"><div className={styles.bigblue}>Ad Enerji Mühendislik</div></NavbarBrand>
+      <Navbar  color="rgba(255,255,255,0.7)" light expand="md">
+        <NavbarBrand to="/"><div className={styles.bigbluelink}> <img className={styles.logoImage}   src={logo}  /> </div></NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
-            <NavItem className={styles.bigblue}>
-              <NavLink  href="/"> <div className={styles.bigblue}>Anasayfa</div></NavLink>
+            <NavItem>
+              <Link  to="/"> <div className={styles.bigbluelink}>Anasayfa</div></Link>
             </NavItem>
             <NavItem>
-              <NavLink href="/about"><div className={styles.bigblue}>Hakkımızda</div></NavLink>
+              <Link to="/about"><div className={styles.bigbluelink}>Hakkımızda</div></Link>
             </NavItem>
             <NavItem>
-              <NavLink href="/dashboard"><div className={styles.bigblue}>Projeler</div></NavLink>
+              <Link to="/dashboard"><div className={styles.bigbluelink}>Projeler</div></Link>
             </NavItem>
           </Nav>
-          <NavbarText>Yenilenebilir Enerji Kaynakları</NavbarText>
+          <NavbarText><div className={styles.blue}>Yenilenebilir Enerji Kaynakları</div></NavbarText>
         </Collapse>
       </Navbar>
     </div>

@@ -1,15 +1,16 @@
 import React from 'react';
 import styles from '../assets/mystyle.module.css';
 import anasayfaresim from '../assets/img/10477.png';
+
+import anasayfaResim from '../assets/img/AnaekranResim.jpg';
 import siemensLogo from '../assets/img/siemens-logo-default.png';
 import kacoLogo from '../assets/img/member-kaco.jpg';
 import { Card, Button, CardTitle, CardText, Row, Col, CardImg, CardHeader, Container } from 'reactstrap';
 
-import 'bootstrap/dist/css/bootstrap.css';
 
 function Home(props) {
 
-    return <Container  container>
+    return <Container  className="landing-wrapper" >
         <Row className={styles.ansayfadiv}>
             <Col >
                 <Row>

@@ -1,16 +1,16 @@
 import React from "react";
+import { render } from 'react-dom';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
-  Link
+  Redirect
 } from "react-router-dom";
 
-import Home from './screens/Home';
 import Projects from './screens/Projects';
 import About from './screens/About';
-import styles from './assets/mystyle.module.css';
 import NavbarSite from "./components/ui/NavbarSite";
+import Anasayfa from './screens/Anasayfa';
 
 // This site has 3 pages, all of which are rendered
 // dynamically in the browser (not server rendered).
@@ -22,12 +22,11 @@ import NavbarSite from "./components/ui/NavbarSite";
 // work properly.
 
 export default function App() {
+  const NotFound = () => <div> 404 Not found</div>
+  const NotFoundRedirect = () => <Redirect to='/not-found' />
   return (
+
     <Router>
-      <div className={styles.main}>
-        <div className={styles.circle1} />
-        <div className={styles.circle2} />
-        <div className={styles.glass}>  
         <NavbarSite />
         
 
@@ -40,21 +39,19 @@ export default function App() {
         */}
         <Switch>
           <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/dashboard">
-            <Projects />
-          </Route>
+            <Anasayfa />
+          </Route>          
+          <Route path='/not-found' component={NotFound} />
+          <Route path="/about" component={About}  />
+          <Route path="/dashboard" component={Projects} />
+          <Route component={NotFoundRedirect} />
         </Switch>
-        </div>
-        
-      </div>
+       
     </Router>
   );
 }
+
+render (<App />,document.getElementById('root'))
 
 // You can think of these components as "pages"
 // in your app.

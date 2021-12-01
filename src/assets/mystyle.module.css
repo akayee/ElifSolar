@@ -28,7 +28,7 @@
   }
   .main{
     min-height: 100vh;
-    background:linear-gradient(to right top,#65dfc9,#6cdbeb);
+    background-image: url(../assets/img/AnaekranResim.jpg);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -81,13 +81,126 @@
     margin: 5px;
   }
   .bigblue {
-    color: #069;
-    font-family: Arial;
+    color: #67B31B;
+    font-family: 'Trebuchet MS', sans-serif;
     text-align: center;
   }
+  .bigbluelink {
+    color: #67B31B;
+    font-family: 'Trebuchet MS', sans-serif;
+    text-align: center;    
+    display: block;
+    padding: 8px 15px;
+  }
   .blue{
-    color: #006688;
-    font-family: Arial;
+    color: #67B31B;
+    font-family: 'Trebuchet MS', sans-serif;
     text-align: center;
+  }
+  .baslik{
+    color: #67B31B;
+    font-family: 'Courier New', monospace;
+    text-align: center;
+  }
+  .btn-primary{
+    color: #67B31B;
+    background-color: #2E4C80;
+    background-color: cutom-color;
+    border-color: #2E4C80;
+    border-color: cutom-cor;
+  }
+  .anasayfaCard{
+    position:fixed;
+    justify-content: center;
+    left: 0;
+    border-color: white;
+    padding:5%;    
+    font-family: 'Courier New', monospace;
+    margin: 5px;
+  }
+  .anasayfaDuyuru{
+    position:fixed;
+    left: 3%;
+    padding-top: 5%;
+    border: 1px solid #a99e06;
+    border-radius: 30px;
+    padding:20px;    
+    font-family: 'Courier New', monospace;
+    margin: 2%;
+    width: 200px;
+    background-color: white;
+  }
+  .hakkimizdaAciklama{
+    left: 3%;
+    padding-top: 5%;
+    border: 1px solid #a99e06;
+    border-radius: 30px;
+    padding:20px;    
+    font-family: 'Courier New', monospace;
+    margin: 2%;
+  }
+  .hakkimizdaIsbitirme{
+    left: 3%;
+    padding-top: 5%;
+    border: 1px solid #a99e06;
+    border-radius: 30px;
+    padding:20px;    
+    font-family: 'Courier New', monospace;
+    margin: 2%;
+    background-color: rgba(255,255,255,0.7);
+
+  }
+  .hakkimizdaIsortakları{
+    left: 3%;
+    padding-top: 5%;
+    border: 1px solid #a99e06;
+    border-radius: 30px;
+    padding:20px;    
+    font-family: 'Courier New', monospace;
+    margin: 2%;
+    width: 30%;
+    background-color: rgba(255,255,255,0.7);
+
+  }
+  .projectImage{
+    width: 100%;
+    height: 300px;
+    border-radius: 30px;
+  }
+  .logoImage{
+    width: 100%;
+    height: 100px;
+    border-radius: 30px;
+  }
+  .projectItem{  
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    display: flex;
+    margin-bottom: 3%;
+    margin-left: 8%;   
+    border-radius: 30px;
+    border-bottom: 1px solid #a99e06;    
+    border-right: 1px solid #a99e06;
+  }
+  .projectList{
+    padding: 5%;  
+    width: 100%;    
+  }
+  .projecTitle{
+    position: relative;
+    background-color: rgba(255,255,255,0.7);
+    top: 5%;
+    left: 20%;
+    border-radius: 30px;
+    padding: 5px;
+  }
+  .projecSummarry{
+    position: relative;
+    background-color: rgba(255,255,255,0.7);
+    top: 5%;
+    left: 20%;
+    border-radius: 30px;
+    padding: 5px;
   }
   
