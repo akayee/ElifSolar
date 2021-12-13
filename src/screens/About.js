@@ -10,12 +10,10 @@ import hakkimizdaResim from '../assets/img/Hakkimizda.jpg';
 import { Container } from 'reactstrap';
 function About(props) {
 
-    return <div style={{
+    return  <div style={{
         backgroundImage: `url(${hakkimizdaResim})`,
-        backgroundPosition: 'bottom',
         backgroundRepeat: 'no-repeat',
-        backgroundSize: "cover",
-        minHeight: "100vh",
+        backgroundSize: "contain",
         overflow: "hidden",
     }}>
         <Container>

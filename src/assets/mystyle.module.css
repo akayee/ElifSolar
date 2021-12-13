@@ -119,7 +119,7 @@
     margin: 5px;
   }
   .anasayfaDuyuru{
-    position:fixed;
+    position:relative;
     left: 3%;
     padding-top: 5%;
     border: 1px solid #a99e06;
