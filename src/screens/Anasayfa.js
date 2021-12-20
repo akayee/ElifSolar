@@ -37,7 +37,7 @@ function Anasayfa(props) {
                             Garantili Satış
                         </h2>
                         <p className="mt-2 text-gray-400 font-serif">
-                            Devlet KDV Desteği ve Fazla Üretimde Alım Garantisi Fırsatlarını Kaçırmayın.
+                            Devletimizin KDV Desteği ve Fazla Üretimde Alım Garantisi Fırsatlarını Kaçırmayın.
                         </p>
 
                     </div>

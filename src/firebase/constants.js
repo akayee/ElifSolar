@@ -1,4 +1,4 @@
-import firebase from "./index"
+import firebase from "./firebase"
 import "firebase/database"
 import "firebase/auth"
 

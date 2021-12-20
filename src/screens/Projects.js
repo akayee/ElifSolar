@@ -7,9 +7,6 @@ import dokuzeylül from '../assets/projeler/ges.jpg';
 import adanakaratas from '../assets/projeler/adanakaratas.jpg';
 import ankaracevrekoruma from '../assets/projeler/cevrekoruma.jpg';
 import caykur from '../assets/projeler/caykur.jpg';
-import saglikbakanligi from '../assets/projeler/saglikbakanligi.jpg';
-import beonfabrikasi from '../assets/projeler/beonfabrikasi.jpg';
-import tatlar from '../assets/projeler/tatlar.jpg';
 import yuzengesjaponya from '../assets/projeler/yuzengesjaponya.jpg';
 import CatiGes1 from '../assets/projeler/Catiges14.jpeg'
 import Catiges2 from '../assets/projeler/Catiges2.jpeg'
@@ -18,7 +15,6 @@ import Catiges5 from '../assets/projeler/Catiges5.jpeg'
 import Catiges6 from '../assets/projeler/Catiges6.jpeg'
 import Catiges7 from '../assets/projeler/Catiges7.jpeg'
 import Inverter9 from '../assets/projeler/Inverter9.jpeg'
-import Kablokurulum3 from '../assets/projeler/Kablokurulum3.jpeg'
 import Trafo8 from '../assets/projeler/Trafo8.jpeg'
 import Zeminges10 from '../assets/projeler/Zeminges10.jpeg'
 import Zeminges12 from '../assets/projeler/Zeminges12.jpeg'
