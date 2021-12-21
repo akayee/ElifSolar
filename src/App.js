@@ -11,6 +11,7 @@ import Projects from './screens/Projects';
 import About from './screens/About';
 import NavbarSite from "./components/ui/NavbarSite";
 import Anasayfa from './screens/Anasayfa';
+import Admin from './screens/Admin';
 
 // This site has 3 pages, all of which are rendered
 // dynamically in the browser (not server rendered).
@@ -44,6 +45,7 @@ export default function App() {
           <Route path='/not-found' component={NotFound} />
           <Route path="/about" component={About}  />
           <Route path="/dashboard" component={Projects} />
+          <Route path="/admin" component={Admin} />
           <Route component={NotFoundRedirect} />
         </Switch>
        

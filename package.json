@@ -8,6 +8,7 @@
     "@testing-library/react": "^11.2.3",
     "@testing-library/user-event": "^12.6.2",
     "bootstrap": "^4.6.0",
+    "firebase": "^9.6.1",
     "firebase-cli": "^1.2.0",
     "node-mandrill": "^1.0.1",
     "react": "^17.0.1",

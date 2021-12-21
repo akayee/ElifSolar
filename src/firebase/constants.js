@@ -1,6 +1,4 @@
-import firebase from "./firebase"
-import "firebase/database"
-import "firebase/auth"
+import app from "./firebase"
 
-export const ref = firebase.database().ref("goldnederland/")
-export const firebaseAuth = firebase.auth()
+export const ref = app.database().ref("goldnederland/")
+export const firebaseAuth = app.auth()
