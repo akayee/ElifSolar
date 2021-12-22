@@ -103,13 +103,13 @@ const projects = [{
 function Projects(props) {
 
     const renderItem = (index, key) => {
-        return <Col md="6" sm="12" lg="3" key={key} className={styles.projectItem}>
-            <div>
+        return <Col md="6" sm="12" lg="3" key={key} >
+            <div className='max-w-sm  border-t-4 border-indigo-600 rounded shadow-lg mt-6 rounded-lg'>
                 <img className={styles.projectImage} src={projects[key].img} />
-                <p className={styles.projecTitle}>{projects[key].adi}</p>
+                <p className="text-center text-xl font-sans hover:font-serif">{projects[key].adi}</p>
             </div>
-            <div>
-                <p className={styles.projecSummarry}> {projects[key].summary}</p>
+            <div className='max-w-sm p-8 border-t-4 border-indigo-600 rounded shadow-lg'>
+                <p className="text-center"> {projects[key].summary}</p>
             </div>
 
         </Col>;

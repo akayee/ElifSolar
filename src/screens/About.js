@@ -1,9 +1,5 @@
 import React from 'react';
 import styles from '../assets/mystyle.module.css';
-
-import adnanyilmaz from '../assets/img/Adnanyilmaz.jpeg'
-
-
 import siemensLogo from '../assets/img/siemens-logo-default.png';
 import kacoLogo from '../assets/img/member-kaco.jpg';
 import hakkimizdaResim from '../assets/img/Hakkimizda.jpg';
@@ -25,9 +21,8 @@ function About(props) {
             </div>
             <div className={styles.hakkimizdaAciklama} ><p>AD Mühendislik grup şirketlerinden olan Elif Global Solar şirketimiz güneş enerjisi sistemleri kurmaktadır.
                 Şirketimiz Siemens yatırımları için  Türkiye'deki tek yetkilidir.</p>
-                <p>Yönetim Kurulu Başkanımız Yüksek İnşaat Mühendisi Adnan YILMAZ:</p>
+                <p>Yönetim Kurulu Başkanımız Yüksek İnşaat Mühendisidir ve Emekli Bürokrattır.</p>
                 <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-                    <img src={adnanyilmaz} alt="Logo" />
                 </div>
             </div>
             
@@ -59,6 +54,12 @@ function About(props) {
                 </div></li>
                 <li> <div >
                     Yıltaş Enerji
+                </div></li>
+                <li> <div >
+                    AD Enerji Mühendislik
+                </div></li>
+                <li> <div >
+                    Aslan Solar Grup
                 </div></li>
             </div>
         </Container>
