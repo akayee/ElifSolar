@@ -3,7 +3,7 @@ import styles from '../assets/mystyle.module.css';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import { Col, Row } from 'reactstrap';
-import dokuzeylül from '../assets/projeler/ges.jpg';
+import dokuzeylül from '../assets/img/418.jpg';
 import adanakaratas from '../assets/projeler/adanakaratas.jpg';
 import ankaracevrekoruma from '../assets/projeler/cevrekoruma.jpg';
 import caykur from '../assets/projeler/caykur.jpg';
@@ -14,16 +14,14 @@ import Catiges4 from '../assets/projeler/Catiges4.jpeg'
 import Catiges5 from '../assets/projeler/Catiges5.jpeg'
 import Catiges6 from '../assets/projeler/Catiges6.jpeg'
 import Catiges7 from '../assets/projeler/Catiges7.jpeg'
-import Inverter9 from '../assets/projeler/Inverter9.jpeg'
-import Trafo8 from '../assets/projeler/Trafo8.jpeg'
-import Zeminges10 from '../assets/projeler/Zeminges10.jpeg'
-import Zeminges12 from '../assets/projeler/Zeminges12.jpeg'
+import Duzce from '../assets/projeler/saglikbakanligi.jpg'
+import Duzce2 from '../assets/projeler/DuzceCatiges.jpeg'
 import Catiges13 from '../assets/projeler/Catiges13.jpeg'
 
 const projects = [{
     adi: "STM ve DSİ GES Projesi",
     img: yuzengesjaponya,
-    summary: "15 MW"
+    summary: "15 GW"
 }, {
     adi: "Dokuz Eylül Üniversitesi GES Projesi",
     img: dokuzeylül,
@@ -31,12 +29,12 @@ const projects = [{
 },
 {
     adi: "Adana Karataş Belediyesi GES Projesi",
-    summary: "5 MW",
+    summary: "3 MW",
     img: adanakaratas
 },
 {
     adi: "Aksaray Çatı GES",
-    summary: "1 MW",
+    summary: "1.150 kW",
     img: CatiGes1
 },
 {
@@ -50,54 +48,44 @@ const projects = [{
     img: Catiges13
 },
 {
-    adi: "Aksaray Arazi GES",
-    summary: "5 MW.",
+    adi: "Aksaray Arazi GES Projesi",
+    summary: "20 MW.",
     img: Catiges2
 },
 {
-    adi: "Bursa Arazi GES",
+    adi: "Bursa TOFAŞ Çatı GES Projesi",
     summary: "5 MW",
     img: ankaracevrekoruma
 },
 {
-    adi: "İzmir Arazi GES",
-    summary: "10 MW",
+    adi: "İzmir Çatı GES Lezita Projesi",
+    summary: "5 MW",
     img: caykur
 },
 {
-    adi: "Konya Arazi GES",
-    summary: "15 MW",
-    img: Zeminges10
-},
-{
-    adi: "Hatay Arazi GES",
+    adi: "Hatay Çatı GES Projesi",
     summary: "10 MW",
-    img: Zeminges12
+    img: Catiges6
 },
 {
-    adi: "Nevşehir Soğuk Hava Çatı GES",
+    adi: "Nevşehir Soğuk Hava Çatı GES Projesi",
     summary: "2.5 MW",
     img: Catiges5
 },
 {
-    adi: "İzmir Çatı GES",
-    summary: "5 MW",
-    img: Catiges6
-},
-{
-    adi: "Kırşehir Arazi GES",
+    adi: "Kırşehir Arazi GES Projesi",
     summary: "4.5 MW",
     img: Catiges7
 },
 {
-    adi: "Düzce Çatı GES",
+    adi: "Düzce Çatı GES Projesi",
     summary: "2.5 MW",
-    img: Inverter9
+    img: Duzce
 },
 {
-    adi: "Düzce Çatı / Arazi GES",
+    adi: "Düzce Çatı / Arazi GES Projesi",
     summary: "15 MW",
-    img: Trafo8
+    img: Duzce2
 }
 ];
 function Projects(props) {
