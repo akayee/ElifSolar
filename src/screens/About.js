@@ -16,12 +16,15 @@ function About(props) {
         overflow: "hidden",
     }}>
         <Container>
-            <h1 className={styles.baslik}> Hakkımızda</h1>
+            <h1 className="text-lime text-3xl font-semibold"> Hakkımızda</h1>
             <div className="max-w-full py-4 px-8 bg-white/[60] shadow-lg rounded-lg my-20 " >
                 <h3 className="text-lime text-3xl font-semibold">İletişim:</h3>
                 <p>info@elifsolar.com</p>
                 <p>adnan@elifsolar.com</p>
                 <p>Eskişehir Yolu SMK Kule</p>
+                <p>+90 544 496 24 48</p>
+                <p>0312 295 62 54</p>
+                <p>0312 217 10 77</p>
             </div>
             <div className="max-w-full py-4 px-8 bg-white/[60] shadow-lg rounded-lg my-20 " >
             <h3 className="text-lime text-3xl font-semibold">Şirketimiz:</h3>

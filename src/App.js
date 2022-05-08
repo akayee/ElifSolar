@@ -14,6 +14,8 @@ import Anasayfa from './screens/Anasayfa';
 import Admin from './screens/Admin';
 import Login from "./screens/Login";
 import CreatePorject from "./screens/CreatePorject";
+import createHistory from 'history/createBrowserHistory'; 
+const history = createHistory(); 
 
 // This site has 3 pages, all of which are rendered
 // dynamically in the browser (not server rendered).
@@ -29,7 +31,7 @@ export default function App() {
   const NotFoundRedirect = () => <Redirect to='/not-found' />
   return (
 
-    <Router>
+    <Router history={history}>
         <NavbarSite />
         
 

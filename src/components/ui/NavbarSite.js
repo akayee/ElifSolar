@@ -36,7 +36,7 @@ const NavbarSite = (props) => {
               <Link to="/dashboard"><div className={styles.bigbluelink}>Projeler</div></Link>
             </NavItem>
           </Nav>
-          <NavbarText><div className={styles.blue}>Yenilenebilir Enerji Kaynakları</div></NavbarText>
+          <NavbarText><div className={styles.blue}>Yenilenebilir Enerji Kaynakları <Link to="/login">  !!!</Link></div></NavbarText>
         </Collapse>
       </Navbar>
     </div>

@@ -25,9 +25,6 @@ function Anasayfa(props) {
 
             <Col sm="6">
                 <div >
-                    <p className="text-lime">
-                        Uzman kadromuz ve tecrübeli iş ortaklarımızdan yararlanmak için teklif alın.
-                    </p>
 
                     <div>
 
@@ -38,6 +35,7 @@ function Anasayfa(props) {
                         </h2>
                         <p className="mt-2 text-gray-400 font-serif">
                             Devletimizin KDV Desteği ve Fazla Üretimde Alım Garantisi Fırsatlarını Kaçırmayın.
+                            Uzman kadromuz ve tecrübeli iş ortaklarımızdan yararlanmak için teklif alın.
                         </p>
 
                     </div>
