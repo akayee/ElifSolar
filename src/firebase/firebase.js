@@ -4,14 +4,14 @@ import 'firebase/compat/database'
 import 'firebase/compat/storage'
 
 const app = firebase.initializeApp({
-    apiKey: "AIzaSyAHeQudbFiG8rJowmdI1SzKBAqY_s76c2c",
-    authDomain: "goldenetherland.firebaseapp.com",
-    databaseURL: "https://goldenetherland.firebaseio.com",
-    projectId: "goldenetherland",
-    storageBucket: "goldenetherland.appspot.com",
-    messagingSenderId: "1011339274142",
-    appId: "1:1011339274142:web:b190bbf0d3538b0341188f",
-    measurementId: "G-59E8S0X67Q"
+    apiKey: "AIzaSyArn34LaStkbbOFElRQxgyaI3FXWWeMhYw",
+    authDomain: "gold-41ce0.firebaseapp.com",
+    databaseURL: "https://gold-41ce0.firebaseio.com",
+    projectId: "gold-41ce0",
+    storageBucket: "gold-41ce0.appspot.com",
+    messagingSenderId: "410116249801",
+    appId: "1:410116249801:web:8a5f4a793a294deccad518",
+    measurementId: "G-TZ2TH4CH04"
 });
 
 export default app;

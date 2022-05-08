@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from 'react-dom';
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Switch,
   Route,
   Redirect
@@ -12,6 +12,8 @@ import About from './screens/About';
 import NavbarSite from "./components/ui/NavbarSite";
 import Anasayfa from './screens/Anasayfa';
 import Admin from './screens/Admin';
+import Login from "./screens/Login";
+import CreatePorject from "./screens/CreatePorject";
 
 // This site has 3 pages, all of which are rendered
 // dynamically in the browser (not server rendered).
@@ -23,7 +25,7 @@ import Admin from './screens/Admin';
 // work properly.
 
 export default function App() {
-  const NotFound = () => <div> 404 Not found</div>
+  const NotFound = () =><div style={{display:"flex",justifyContent:"center",alignItems:"center"}}><h1 > 404 Sayfa Bulunamadı</h1></div> 
   const NotFoundRedirect = () => <Redirect to='/not-found' />
   return (
 
@@ -46,7 +48,9 @@ export default function App() {
           <Route path="/about" component={About}  />
           <Route path="/dashboard" component={Projects} />
           <Route path="/admin" component={Admin} />
-          <Route component={NotFoundRedirect} />
+          <Route path="/createProject" component={CreatePorject} />
+          <Route path="/login" component={Login} />
+          <Route path="*" exact={true} component={NotFoundRedirect} />
         </Switch>
        
     </Router>
