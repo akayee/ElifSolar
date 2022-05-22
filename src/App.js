@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from 'react-dom';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
   Redirect
@@ -15,7 +15,9 @@ import Admin from './screens/Admin';
 import Login from "./screens/Login";
 import CreatePorject from "./screens/CreatePorject";
 import createHistory from 'history/createBrowserHistory'; 
-const history = createHistory(); 
+import Actions from "./screens/Actions";
+import Accounting from "./screens/Accounting";
+import history from "./history";
 
 // This site has 3 pages, all of which are rendered
 // dynamically in the browser (not server rendered).
@@ -47,11 +49,13 @@ export default function App() {
             <Anasayfa />
           </Route>          
           <Route path='/not-found' component={NotFound} />
-          <Route path="/about" component={About}  />
-          <Route path="/dashboard" component={Projects} />
+          <Route path="/about" exact={true} component={About}  />
+          <Route path="/dashboard" exact={true} component={Projects} />
+          <Route path="/neyapiyoruz" exact={true} component={Actions} />
+          <Route path="/accounting" exact={true} component={Accounting} />
           <Route path="/admin" component={Admin} />
-          <Route path="/createProject" component={CreatePorject} />
-          <Route path="/login" component={Login} />
+          <Route path="/createProject"  component={CreatePorject} />
+          <Route path="/login" exact={true} component={Login} />
           <Route path="*" exact={true} component={NotFoundRedirect} />
         </Switch>
        

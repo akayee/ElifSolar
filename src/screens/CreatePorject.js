@@ -1,14 +1,16 @@
 import React from 'react';
 import {
-    Link, BrowserRouter as Router,
+    Link, HashRouter as Router,
     Switch,
     Route,
     Redirect
 } from 'react-router-dom';
-import { addData } from '../firebase/auth';
+import { addData, takeData } from '../firebase/auth';
 import firebase from "../firebase/firebase";
 
 import '../assets/tailwind.css';
+
+import Accounting from './Accounting';
 
 import { Col, Row, Button } from 'reactstrap';
 import FileUploader from "react-firebase-file-uploader";
@@ -33,7 +35,9 @@ class CreatePorject extends React.Component {
             downloadURLs: [],
             isUploading: false,
             uploadProgress: 0,
-            logged: true
+            logged: firebase.auth().currentUser.uid,
+            admin: false,
+            users:null
         }
         this.onDrop = this.onDrop.bind(this);
     }
@@ -79,8 +83,34 @@ class CreatePorject extends React.Component {
 
     }
 
+    componentDidMount(){
+        var that=this;
+        takeData("users").on('value', (snapshot) => {
+            let data = snapshot.val();
+            console.log(data)
+            let isAdmin = false
+            Object.keys(data).map((item,index)=>{
+                console.log("key",item)
+                console.log("uid",firebase.auth().currentUser.uid )
+                console.log("value",data[item])
+                if(item===firebase.auth().currentUser.uid && data[item]===true)
+                {
+                    isAdmin = true
+                    console.log("isAdmin",isAdmin)
+                }
+            })
+
+            this.setState({...that.state,admin:isAdmin})
+        });
+
+        console.log(this.state.admin)
+    }
+
     render() {
-        return <div className="iron-product-add-wrap pt-50 px-sm-50 px-md-0">
+        if(this.state.admin){
+            return <Accounting /> 
+        } 
+        return  <div className="iron-product-add-wrap pt-50 px-sm-50 px-md-0">
             <div className="my-0 d-flex justify-content-center align-items-center">
 
                 <h2><b>Proje Oluştur</b></h2>
@@ -97,7 +127,7 @@ class CreatePorject extends React.Component {
 
                                 {data.image_gallery && data.image_gallery.map((gallery, index) => {
                                     return (
-                                        <Col item xs={2} sm={3} md={2} lg={2} className="py-0">
+                                        <Col item xs={2} sm={3} md={2} lg={2} key={index} className="py-0">
                                             <div className="image-upload">
                                                 <a href="javascript:void(0)">
                                                     <img
@@ -148,18 +178,18 @@ class CreatePorject extends React.Component {
                                 <div className="mb-sm-50  mb-20 detail-btns pl-25">
 
                                     <div>
-                                        <label for="about" class="block text-sm font-medium text-gray-700">
+                                        <label for="about" className="block text-sm font-medium text-gray-700">
                                             Başlık
                                         </label>
-                                        <div class="mt-1 w-full dflex">
-                                            <textarea onChange={this.handleChange} id="header" name="header" rows="1" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border-gray-300 rounded-md" placeholder="Başlık"></textarea>
+                                        <div className="mt-1 w-full dflex">
+                                            <textarea onChange={this.handleChange} id="header" name="header" rows="1" className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border-gray-300 rounded-md" placeholder="Başlık"></textarea>
                                         </div>
 
-                                        <label for="about" class="block text-sm font-medium text-gray-700">
+                                        <label for="about" className="block text-sm font-medium text-gray-700">
                                             Gücü
                                         </label>
-                                        <div class="mt-3 dflex ">
-                                            <textarea onChange={this.handleChange} id="about" name="about" rows="1" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border-gray-300 rounded-md" placeholder="Gücü"></textarea>
+                                        <div className="mt-3 dflex ">
+                                            <textarea onChange={this.handleChange} id="about" name="about" rows="1" className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border-gray-300 rounded-md" placeholder="Gücü"></textarea>
                                         </div>
                                     </div>
 

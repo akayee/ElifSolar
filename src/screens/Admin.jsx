@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Link, BrowserRouter as Router,
+  Link, HashRouter as Router,
   Switch,
   Route,
   Redirect
@@ -36,7 +36,7 @@ class Admin extends React.Component {
       downloadURLs: [],
       isUploading: false,
       uploadProgress: 0,
-      logged: true
+      logged: firebase.auth().currentUser.uid
     }
     this.onDrop = this.onDrop.bind(this);
   }
@@ -72,7 +72,10 @@ class Admin extends React.Component {
   handleChange = (event) => {
     this.setState({ data: { ...this.state.data, [event.target.name]: event.target.value } });
   };
-
+  componentDidMount(){
+    
+    console.log("Userrrrrrrr",firebase.auth().currentUser.uid)
+  }
   submitData = () => {
     let data = this.state.data;
     data.image = this.state.downloadURLs[0];
@@ -167,12 +170,6 @@ class Admin extends React.Component {
                     </label>
                     <div class="mt-3 dflex ">
                       <textarea onChange={this.handleChange} id="video" name="videolink" rows="1" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border-gray-300 rounded-md" placeholder="Video Linki"></textarea>
-                    </div>
-                    <label for="about" class="block text-sm font-medium text-gray-700">
-                      Sunum Linki
-                    </label>
-                    <div class="mt-3 dflex ">
-                      <textarea onChange={this.handleChange} id="sunum" name="sunumlink" rows="1" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border-gray-300 rounded-md" placeholder="Sunum Linki"></textarea>
                     </div>
                   </div>
 

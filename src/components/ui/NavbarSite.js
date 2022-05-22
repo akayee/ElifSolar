@@ -13,6 +13,7 @@ import {
 } from 'reactstrap';
 import styles from '../../assets/mystyle.module.css';
 import logo from '../../assets/img/Logo.png'
+import { Face } from '@material-ui/icons'
 
 const NavbarSite = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,8 +36,11 @@ const NavbarSite = (props) => {
             <NavItem>
               <Link to="/dashboard"><div className={styles.bigbluelink}>Projeler</div></Link>
             </NavItem>
+            <NavItem>
+              <Link to="/neyapiyoruz"><div className={styles.bigbluelink}>Elif Solar Ne Yapıyor?</div></Link>
+            </NavItem>
           </Nav>
-          <NavbarText><div className={styles.blue}>Yenilenebilir Enerji Kaynakları <Link to="/login">  !!!</Link></div></NavbarText>
+          <NavbarText><div className={styles.blue}>Yenilenebilir Enerji Kaynakları <Link to="/login"> <Face className={styles.blue} /></Link></div></NavbarText>
         </Collapse>
       </Navbar>
     </div>

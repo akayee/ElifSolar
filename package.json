@@ -23,8 +23,8 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "craco start",
-    "build": "craco build",
+    "start": "craco start webpack-dev-server --inline --content-base . --history-api-fallback",
+    "build": "craco build webpack-dev-server --inline --content-base . --history-api-fallback",
     "test": "craco test",
     "eject": "react-scripts eject",
     "build:css": "postcss src/assets/tailwind.css -o src/assets/main.css",
